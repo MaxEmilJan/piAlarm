@@ -48,9 +48,14 @@ pip install adafruit-circuitpython-neopixel
 ~~~
 sudo nano /etc/rc.local
 ~~~
-11. enter following command before the "exit 0" line. this will make the startup.py file to run on boot
+11. enter following command before the "exit 0" line. this will make the startup.py file to run on boot. also it will turn of the power led of the pi
 ~~~
-python3 /home/pi/piAlarm/startup.py &
+sudo sh -c 'echo none > /sys/class/leds/led0/trigger'
+sudo sh -c 'echo none > /sys/class/leds/led1/trigger'
+sudo sh -c 'echo 0 > /sys/class/leds/led0/brightness'
+sudo sh -c 'echo 0 > /sys/class/leds/led1/brightness'
+
+sudo python /home/pi/<...your_folders...>/startup.py
 ~~~
 12. hit CTRL+X
 13. enter
