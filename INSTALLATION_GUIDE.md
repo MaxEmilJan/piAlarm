@@ -44,4 +44,17 @@ sudo python raspi-blinka.py
 ~~~
 pip install adafruit-circuitpython-neopixel
 ~~~
+10. open terminal and type
+~~~
+sudo nano /etc/rc.local
+~~~
+11. enter following command before the "exit 0" line. this will make the startup.py file to run on boot
+~~~
+python3 /home/pi/piAlarm/startup.py &
+~~~
+12. hit CTRL+X
+13. enter
+~~~
+sudo reboot
+~~~
 ---
