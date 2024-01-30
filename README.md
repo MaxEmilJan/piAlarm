@@ -1,2 +1,2 @@
 # piAlarm
-sunrise alarm clock using a rasperryPi and some neopixel RGB-LEDs
+a sunlight alarm clock for my raspberry pi
